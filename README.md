@@ -8,7 +8,7 @@ Python noteboook for Pycon Dublin Novermber 2016 talk. Introuding 5 part of spee
 
 - Home Depot data from Kaggle Competition - 
 https://www.kaggle.com/c/home-depot-product-search-relevance/data saved in folder called <b>kaggle_data</b>
-- stanford parsers save in *stanford* folder
+- stanford parsers save in <b>stanford</b> folder
   - http://nlp.stanford.edu/software/tagger.html 
   - http://nlp.stanford.edu/software/CRF-NER.html
 
