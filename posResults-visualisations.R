@@ -102,3 +102,13 @@ for(i in 1:length(sampleSizes)){
 
 plot3 <- do.call(grid.arrange,c(p,top="Total time (secs) incresaing broken by sample sizes"))
 
+averagePOSTime <- posData2 %>% group_by(parser,sampleRows) %>% 
+  summarise(mean.time = weighted.mean(time,totalWords/sum(totalWords),na.rm=T,)) %>%
+  spread(sampleRows,mean.time)
+
+speedGain <- data.frame(lapply(averagePOSTime[,(2:5),with=F], function(X) X/X[1]))
+speedGain$average = round(rowMeans(speedGain,na.rm=T),2)
+speedGain <- cbind(averagePOSTime$parse,speedGain)
+
+
+
